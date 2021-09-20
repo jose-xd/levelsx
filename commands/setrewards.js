@@ -5,7 +5,6 @@ module.exports = {
     desciption: "Set rewards",
 
     async execute(client, message, cmd, args) {
-
         
         if (!args[1]) return message.channel.send("Please put something")
 
@@ -17,7 +16,9 @@ module.exports = {
         if (isNaN(roleSelected3)) return message.channel.send('Please provide a valid role');
         if (roleSelected3.length < 18) return message.channel.send('Please provide a valid role');
         if (roleSelected3.length > 20) return message.channel.send('Please provide a valid role');
+
         var customLevel = args[0];
+        
         if (!customLevel) return message.channel.send('Please provide a level');
         if (isNaN(customLevel)) return message.channel.send('Please provide valid a level');
         if (customLevel < 1) return message.channel.send('Please provide a valid level');
