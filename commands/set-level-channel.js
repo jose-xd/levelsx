@@ -17,6 +17,7 @@ module.exports = {
         if (isNaN(channelSelected3)) return message.channel.send('Please provide a valid channel');
         if (channelSelected3.length < 18) return message.channel.send('Please provide a valid channel');
         if (channelSelected3.length > 20) return message.channel.send('Please provide a valid channel');
+        
         var customMessage = args.slice(1).join(" ");
         if (!customMessage) return message.channel.send('Please provide a custom message');
         if (customMessage.length > 200) return message.channel.send('Please provide a shorter custom message');
